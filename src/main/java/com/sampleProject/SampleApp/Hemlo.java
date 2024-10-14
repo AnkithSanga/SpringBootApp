@@ -1,8 +1,13 @@
 package com.sampleProject.SampleApp;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class Hemlo {
 
-    public static void main (String[] args){
-        System.out.println("This is a print message");
+    @RequestMapping("")
+    public String greetings(){
+        return "Namaste , How are you";
     }
 }
